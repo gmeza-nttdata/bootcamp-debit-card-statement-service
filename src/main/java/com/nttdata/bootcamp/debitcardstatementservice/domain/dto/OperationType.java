@@ -6,5 +6,4 @@ public enum OperationType {
     // For Credit:
     CONSUMPTION, PAYMENT,
     // For Debit:
-    DEBIT_CONSUMPTION
 }

@@ -4,11 +4,17 @@ import com.nttdata.bootcamp.debitcardstatementservice.domain.DebitCardStatement;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.math.BigDecimal;
+
 public interface DebitCardStatementOperations {
-    Flux<DebitCardStatement> queryAll();
-    Mono<DebitCardStatement> findById(String id);
-    Mono<DebitCardStatement> create(DebitCardStatement accountStatement);
-    Mono<DebitCardStatement> update(String id, DebitCardStatement accountStatement);
+
+    Mono<DebitCardStatement> payWithDebitCard(String cardId, BigDecimal amount);
+    Mono<DebitCardStatement> withdraw(String cardId, BigDecimal amount);
+
+    Flux<DebitCardStatement> getStatementsByAccountNumber(String accountNumber);
+    Flux<DebitCardStatement> getAllStatements();
+
+    Mono<DebitCardStatement> getStatement(String id);
     Mono<Void> delete(String id);
 
 }
