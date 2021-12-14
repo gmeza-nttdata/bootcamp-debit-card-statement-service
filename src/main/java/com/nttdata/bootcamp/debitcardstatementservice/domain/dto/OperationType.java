@@ -4,6 +4,6 @@ public enum OperationType {
     // For Account:
     DEPOSIT, WITHDRAWAL,
     // For Credit:
-    CONSUMPTION, PAYMENT,
+    CREDIT_PAYMENT, PAYMENT,
     // For Debit:
 }

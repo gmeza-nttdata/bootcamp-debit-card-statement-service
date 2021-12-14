@@ -14,6 +14,7 @@ public class DebitCardStatementDao {
     private String productType;
     private String number;
     private OperationType operation;
+    private String cardId;
     private BigDecimal amount;
     private LocalDateTime dateTime;
     private BigDecimal fee;
